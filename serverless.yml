@@ -24,6 +24,8 @@ provider:
   name: aws
   runtime: python3.7
   profile: honorlock
+  apiKeys:
+    - value: 9WN&]/jR#8NHT(P6\8u+8)S:a
 
 # you can overwrite defaults here
 #  stage: dev
@@ -61,6 +63,11 @@ provider:
 functions:
   hello:
     handler: handler.hello
+    events:
+      - http:
+          path: detect-faces
+          method: post
+          cors: true
 #    The following are a few example events you can configure
 #    NOTE: Please make sure to change your handler code to work with those events
 #    Check the event documentation for details

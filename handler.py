@@ -6,6 +6,7 @@ from urllib.parse import parse_qs
 
 def hello(event, context):
     reqBody = parse_qs(event["body"])
+    print('reqBody: ', reqBody["image"][0])
     pixels = read_base64_image(reqBody["image"][0])
 
     modelFile = "models/opencv_face_detector_uint8.pb"
@@ -53,6 +54,9 @@ def detect_with_dnn(net, pixels):
     return faces
 
 def read_base64_image(base64_string):
+    # https://stackoverflow.com/questions/2941995/python-ignore-incorrect-padding-error-when-base64-decoding
+    base64_string += "=" * ((4 - len(base64_string) % 4) % 4) #ugh
+
     decoded = base64.b64decode(base64_string)
     nparr = np.fromstring(decoded, np.uint8)
 

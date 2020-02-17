@@ -5,5 +5,8 @@
   "dependencies": {},
   "devDependencies": {
     "serverless-python-requirements": "^5.0.1"
+  },
+  "scripts": {
+    "locally": "sls invoke local -f hello -p event.json"
   }
 }
