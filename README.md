@@ -29,7 +29,7 @@ Used api key: `9WN&]/jR#8NHT(P6\8u+8)S:a`
 ### Base64 encode
 
 ```bash
-base64 -w 0 student023.jpg > student023.jpg.base64
+base64 -w 0 picture-with-human-faces.jpg > picture-with-human-faces.jpg.base64
 ```
 
 ### Detect face
