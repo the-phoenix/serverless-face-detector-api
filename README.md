@@ -23,8 +23,9 @@ sls deploy
 
 ## Usage
 
-You can create, retrieve, update, or delete todos with the following commands:
-Used api key: `9WN&]/jR#8NHT(P6\8u+8)S:a`
+You can do base64 encode of the source image and detect human faces from it using below commands.
+
+Imagine used api key looks like this: `9WN&]/jR#8NHT(P6\8u+8)S:a`
 
 ### Base64 encode
 
